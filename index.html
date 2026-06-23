@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>РПК Энерджи | Рекламно-производственная компания | Якутск</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        РПК ЭНЕРДЖИ
+        <span class="logo-sub">рекламное агентство</span>
+    </div>
+    <div class="nav-links">
+        <a href="#" onclick="showSection('home')">Главная</a>
+        <a href="#" onclick="showSection('catalog')">Каталог</a>
+        <a href="#" onclick="showSection('portfolio')">Портфолио</a>
+        <a href="#" onclick="showSection('works')">Видеоработы</a>
+        <div id="authLinks">
+            <a href="#" onclick="showSection('auth')">Вход / Регистрация</a>
+        </div>
+        <div id="profileLinks" style="display:none;">
+            <a href="#" id="profileNameLink" onclick="showSection('client-profile')"></a>
+            <a href="#" onclick="logoutClient()">Выйти</a>
+        </div>
+        <div id="adminProfileLinks" style="display:none;">
+            <a href="#" onclick="showSection('admin-orders')">Админ панель</a>
+            <a href="#" onclick="logoutAdmin()">Выход (админ)</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container" id="content"></div>
+
+<!-- Кнопка наверх -->
+<button id="scrollTopBtn" class="scroll-top">↑</button>
+
+<!-- Канвас для частиц -->
+<canvas id="particlesCanvas"></canvas>
+
+<script src="app.js"></script>
+</body>
+</html>
